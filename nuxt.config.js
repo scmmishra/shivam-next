@@ -4,7 +4,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'shivam.dev',
+    title: 'Shivam Mishra',
     htmlAttrs: {
       lang: 'en',
     },
@@ -49,5 +49,9 @@ export default {
   content: {},
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {},
+  build: {
+    parallel: true,
+    cache: true,
+    hardsource: true,
+  },
 }

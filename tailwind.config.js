@@ -1,3 +1,5 @@
+const colors = require('tailwindcss/colors')
+
 module.exports = {
   future: {
     removeDeprecatedGapUtilities: true,
@@ -11,6 +13,10 @@ module.exports = {
     './nuxt.config.{js,ts}',
   ],
   theme: {
+    backdropFilter: {
+      'none': 'none',
+      'blur': 'blur(20px)',
+    },
     fontFamily: {
       sans: [
         'Barlow',
@@ -40,8 +46,51 @@ module.exports = {
         'monospace',
       ],
     },
-    extend: {},
+    extend: {
+      colors: {
+        'light-blue': colors.lightBlue,
+        cyan: colors.cyan,
+        orange: colors.orange
+      },
+      typography: {
+        'xs': {
+          css: {
+            fontSize: '0.5rem',
+            h1: {
+              fontSize: '1.75rem',
+              fontWeight: 800,
+              marginTop: '0',
+              marginBottom: '0.8rem',
+              lineHeight: 1.2,
+            },
+            h2: {
+              fontSize: '1.25rem',
+              fontWeight: 800,
+              marginTop: '0',
+              marginBottom: '0.5rem',
+              lineHeight: 1.2,
+            },
+            h3: {
+              fontSize: '1rem',
+              fontWeight: 800,
+              marginTop: '0',
+              marginBottom: '0.5rem',
+              lineHeight: 1.2,
+            },
+            p: {
+              fontSize: '0.875rem',
+              marginTop: '0',
+              marginBottom: '0.5rem',
+              lineHeight: 1.5,
+            },
+          },
+        },
+      }
+    },
   },
   variants: {},
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/typography'),
+    require('tailwindcss-filters'),
+  ],
 }
