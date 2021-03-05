@@ -15,7 +15,7 @@
             href="https://buttondown.email"
             >Buttondown</a
           >
-          to host this newsletter, It's trusted my many for it's privacy
+          to host this newsletter, It's trusted by many for it's privacy
           practices, you can read more
           <a
             class="text-gray-900 hover:underline"
