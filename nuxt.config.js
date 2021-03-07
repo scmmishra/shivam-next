@@ -1,3 +1,5 @@
+const shiki = require('shiki')
+
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
@@ -46,7 +48,20 @@ export default {
   ],
 
   // Content module configuration: https://go.nuxtjs.dev/config-content
-  content: {},
+  content: {
+    markdown: {
+      async highlighter() {
+        const highlighter = await shiki.getHighlighter({
+          // Complete themes: https://github.com/shikijs/shiki/tree/master/packages/themes
+          theme: 'min-dark'
+        })
+
+        return (rawCode, lang) => {
+          return highlighter.codeToHtml(rawCode, lang)
+        }
+      }
+    }
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {

@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-gray-50">
+  <div>
     <header class="backdrop-blur">
       <div class="max-w-4xl px-4 py-24 mx-auto md:px-0">
         <h1 class="text-4xl font-black text-gray-800 sm:text-5xl">
@@ -29,45 +29,23 @@
       </div>
     </header>
     <Nuxt />
-    <signup></signup>
-    <footer>
-      <div class="max-w-4xl px-4 py-24 mx-auto space-y-5 md:px-0">
-        <div>
-          <h2 class="text-2xl font-bold">You've reached the footer.</h2>
-          <p class="max-w-2xl text-gray-700">
-            Thanks for scrolling this far.
-            <span
-              class="text-gray-900 underline hover:underline sm:no-underline"
-              @click="fire"
-              >Here's some confetti for you</span
-            >
-          </p>
-        </div>
-        <div class="flex space-x-5 font-bold text-gray-600">
-          <a href="/projects">Projects</a>
-          <a href="/articles">Articles</a>
-          <a href="https://twitter.com/scmmishra">Twitter</a>
-          <a href="https://github.com/scmmishra">GitHub</a>
-        </div>
-      </div>
-    </footer>
+    <Signup></Signup>
+    <Footer></Footer>
   </div>
 </template>
 <script>
-import confetti from "canvas-confetti";
 import Signup from "~/components/Signup.vue";
+import Footer from "~/components/Footer.vue";
 
 export default {
   name: "Default",
-  components: { Signup },
-  methods: {
-    fire() {
-      confetti({
-        particleCount: 100,
-        spread: 70,
-        origin: { y: 0.6 },
-      });
-    },
-  },
+  components: { Signup, Footer },
+  head() {
+    return {
+      bodyAttrs: {
+        class: 'bg-gray-50'
+      }
+    }
+  }
 };
 </script>

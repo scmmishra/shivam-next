@@ -20,11 +20,11 @@
           <h2 class="text-4xl font-black text-gray-300">Writings</h2>
         </div>
         <div class="grid grid-cols-1 gap-4">
-          <FrostedCard
-            v-for="w in writings"
-            :key="w.title"
-            v-bind="w"
-          ></FrostedCard>
+          <BlogCard
+            v-for="blog in blogs"
+            v-bind="blog"
+            :key="blog.slub"
+          ></BlogCard>
         </div>
       </div>
     </section>
@@ -33,9 +33,21 @@
 
 <script>
 import FrostedCard from "~/components/FrostedCard.vue";
+import BlogCard from "~/components/BlogCard.vue";
+
 
 export default {
-  components: { FrostedCard },
+  components: { FrostedCard, BlogCard },
+  async asyncData({ $content }) {
+    const blogs = await $content('blog').where({ featured: true }).fetch()
+    console.log(blogs)
+    return { blogs };
+  },
+  methods: {
+    getFormattedDate(date) {
+      return dayjs(date).format('D MMM, YYYY')
+    }
+  },
   data() {
     return {
       projects: [
@@ -71,11 +83,13 @@ export default {
       writings: [
         {
           title: "Detecting Outside Clicks Element",
+          link: "blog/outside-click",
           subtitle: `When building apps, the primary form of code reuse and abstraction that Vue has to offer is components - however there may be cases where you may need some low-level DOM access on plain elements, and this is where custom directives should be used. It’s important to note that directives are meant to encapsulate DOM manipulations only, while components are self-contained units that have their own view and data logic. `,
           date: "24th February, 2021",
         },
         {
           title: "Building Graphique",
+          link: "blog/outside-click",
           subtitle:
             "Graphique (gra·fik) is a modern take on Frappe Charts, it focuses on performance, UX and providers a cleaner API to enable new interactions with the library. The inital version is set to have only line and bar charts, soon this will be expanded to other types. Written in TypeScript, this library has no external dependencies that ships except for the library itself, drastically reducing load and parsing time in the browser.",
           date: "18th March, 2021",

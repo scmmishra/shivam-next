@@ -55,6 +55,9 @@ module.exports = {
       typography: {
         'xs': {
           css: {
+            pre: {
+              marginTop: '0px',
+            },
             fontSize: '0.5rem',
             h1: {
               fontSize: '1.75rem',
