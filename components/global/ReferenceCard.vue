@@ -4,6 +4,7 @@
       v-for="ref in references"
       :key="ref.link"
       :href="ref.link"
+      target="_blank"
       class="cursor-pointer flex space-x-4 rounded-xl bg-gray-100 p-3"
     >
       <img v-if="ref.logo" :src="ref.logo" class="h-12 w-12" />
