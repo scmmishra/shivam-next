@@ -6,7 +6,7 @@
       class="p-8 space-y-4 bg-white border border-gray-100 shadow-lg sm:p-16 rounded-xl sm:rounded-3xl"
     >
       <div class="prose prose-xs max-w-none">
-        <h1 class="text-2xl font-bold">Subscribe</h1>
+        <h1 class="text-2xl font-bold">📫&nbsp;&nbsp;{{ title }}</h1>
         <p class="max-w-2xl text-gray-700">
           I'll send an email only when I publish something on my blog, which is
           usually once month at best. So don't worry about spam. I use
@@ -23,8 +23,16 @@
             >here</a
           >.
         </p>
+        <div v-if="verbose" class="hidden md:block">
+          <h3>Things I generally write about</h3>
+          <ul class="text-xs">
+            <li>Learnings from building Vue and Nuxt Apps</li>
+            <li>UI and UX nuances I notice around the web</li>
+            <li>My personal projects like charts and graphique</li>
+          </ul>
+        </div>
         <p class="max-w-2xl text-gray-700">
-          If you're convinced, drop your email below
+          If you're interested, drop your email below
         </p>
       </div>
       <div>
@@ -51,5 +59,15 @@
 <script>
 export default {
   name: "Signup",
+  props: {
+    title: {
+      type: String,
+      default: 'Subscribe'
+    },
+    verbose: {
+      type: Boolean,
+      default: false,
+    }
+  }
 };
 </script>
