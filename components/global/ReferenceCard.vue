@@ -3,7 +3,7 @@
     <a
       v-for="ref in references"
       :key="ref.link"
-      :href="link"
+      :href="ref.link"
       class="cursor-pointer flex space-x-4 rounded-xl bg-gray-100 p-3"
     >
       <img v-if="ref.logo" :src="ref.logo" class="h-12 w-12" />
