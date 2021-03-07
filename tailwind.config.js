@@ -69,6 +69,9 @@ module.exports = {
             },
             p: {
               color: colors.gray[600],
+            },
+            a: {
+              textDecoration: 'none'
             }
           },
         },

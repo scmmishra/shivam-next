@@ -2,6 +2,11 @@
 title: Detecting Outside Clicks Element
 readTime: 4 Mins
 featured: true
+references:
+  - link: "https://vuejs.org/v2/guide/custom-directive.html"
+    title: "Custom Directives - Vue.js"
+    description: "VueJS documentation for writing custom directives"
+    logo: "/vue.svg"
 ---
 
 ## Vue Directives
@@ -10,7 +15,7 @@ You might have used `v-model` , `v-if` , `v-for` or `v-show` shipped with Vue Co
 
 When building apps, the primary form of code reuse and abstraction that Vue has to offer is components - however there may be cases where you may need some low-level DOM access on plain elements, and this is where custom directives should be used. It’s important to note that directives are meant to encapsulate DOM manipulations only, while components are self-contained units that have their own view and data logic.
 
-<!--more--> 
+<!--more-->
 
 One good example of such a use case is tooltips, [v-tooltip](https://github.com/Akryum/v-tooltip) is a popular library, it's a wrapper for [popperjs](https://github.com/popperjs/popper-core). This library can be registered as a directive and used as follows
 
@@ -29,7 +34,7 @@ Vue provides us with a comprehensive suite of hooks that are triggered at specif
 - `bind` – This occurs once the directive is attached to the element. Think of this like an `init` function
 - `inserted` – This hook occurs once the element is inserted into the parent DOM.
 - `update` – This hook is called when the element updates, but children haven’t been updated yet.
-- `componentUpdated` – This hook is called once the component *and* the children have been updated.
+- `componentUpdated` – This hook is called once the component _and_ the children have been updated.
 - `unbind` – This hook is called once the directive is removed.
 
 Vue documentation has a good example a `v-focus` directive with `autofocus` like behaviour for input components. You can check it out [here](https://vuejs.org/v2/guide/custom-directive.html#Intro).
@@ -44,15 +49,13 @@ Let’s start with a toy dropdown component
 
 ```vue
 <template>
-	<button v-on:click="toggle" class="dropdown-button">
-	  Menu
-	</button>
+  <button v-on:click="toggle" class="dropdown-button">Menu</button>
   <div v-if="isOpen" v-outside-click="close" class="dropdown-body">
-	<ul>
-	  <li>Account Settings</li>
-	  <li>Notifications</li>
-	  <li>Log Out</li>
-	</ul>
+    <ul>
+      <li>Account Settings</li>
+      <li>Notifications</li>
+      <li>Log Out</li>
+    </ul>
   </div>
 </template>
 <script>
@@ -80,8 +83,8 @@ Here we want a function close to be triggered when clicked outside the element w
 ```js
 function onDocumentClick(e, el, fn) {
   let target = e.target;
-  if ((el !== target) && (!el.contains(target))) {
-	fn(e);
+  if (el !== target && !el.contains(target)) {
+    fn(e);
   }
 }
 ```
@@ -91,16 +94,16 @@ Let’s create the directive. In this case we only need the `bind` and `unbind` 
 ```js
 export default {
   bind(el, binding) {
-	const fn = binding.value;
-	const click = function (e) {
-	  onDocumentClick(e, el, fn)
-	};
+    const fn = binding.value;
+    const click = function (e) {
+      onDocumentClick(e, el, fn);
+    };
 
-	document.addEventListener('click', click);
+    document.addEventListener("click", click);
   },
   unbind(el) {
-	// Remove event handler
-  }
+    // Remove event handler
+  },
 };
 ```
 
@@ -117,20 +120,20 @@ const instance = [];
 
 export default {
   bind(el, binding) {
-	// add the index to element data attributes
-	el.dataset.outsideClickIndex = instances.length;
+    // add the index to element data attributes
+    el.dataset.outsideClickIndex = instances.length;
 
-	const fn = binding.value;
-	const click = function (e) {
-	  onDocumentClick(e, el, fn)
-	};
+    const fn = binding.value;
+    const click = function (e) {
+      onDocumentClick(e, el, fn);
+    };
 
-	document.addEventListener('click', click);
-	instances.push(click);
+    document.addEventListener("click", click);
+    instances.push(click);
   },
   unbind(el) {
-	// Remove event handler
-  }
+    // Remove event handler
+  },
 };
 ```
 
@@ -156,40 +159,45 @@ let instances = [];
 
 function onDocumentClick(e, el, fn) {
   let target = e.target;
-  if ((el !== target) && (!el.contains(target))) {
-	fn(e);
+  if (el !== target && !el.contains(target)) {
+    fn(e);
   }
 }
 
 export default {
   bind(el, binding) {
-	el.dataset.outsideClickIndex = instances.length;
+    el.dataset.outsideClickIndex = instances.length;
 
-	const fn = binding.value;
-	const click = function (e) {
-	  onDocumentClick(e, el, fn)
-	};
+    const fn = binding.value;
+    const click = function (e) {
+      onDocumentClick(e, el, fn);
+    };
 
-	document.addEventListener('click', click);
-	document.addEventListener('touchstart', click);
-	instances.push(click);
+    document.addEventListener("click", click);
+    document.addEventListener("touchstart", click);
+    instances.push(click);
   },
   unbind(el) {
-	const index = el.dataset.outsideClickIndex;
-	const handler = instances[index];
-	document.removeEventListener('click', handler);
-	document.removeEventListener('touchstart', click);
-	instances.splice(index, 1);
-  }
+    const index = el.dataset.outsideClickIndex;
+    const handler = instances[index];
+    document.removeEventListener("click", handler);
+    document.removeEventListener("touchstart", click);
+    instances.splice(index, 1);
+  },
 };
 ```
+
 </codeblock>
 
 And here it is. In your main.js file you can register the directive as follows
 
 ```js
-import outsideClickDirective from '../../directives/outside-click'
-Vue.directive('outside-click', outsideClickDirective)
+import outsideClickDirective from "../../directives/outside-click";
+Vue.directive("outside-click", outsideClickDirective);
 ```
 
 That’s all folks. Here is a gist with the typescript version of the directive that I actually ended up using. I shall be sharing more examples, tips and best practices on this blog, subscribe to my newsletter if it seems interesting to you. Don’t worry, I have taken the eternal oath of no spamming ever.
+
+## References
+
+<reference-card :references="references"></reference-card>

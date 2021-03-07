@@ -29,7 +29,7 @@
       </div>
     </header>
     <Nuxt />
-    <Signup></Signup>
+    <Signup title="Let's stay in touch?"></Signup>
     <Footer></Footer>
   </div>
 </template>

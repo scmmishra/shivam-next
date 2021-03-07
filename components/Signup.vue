@@ -9,7 +9,7 @@
         <h1 class="text-2xl font-bold">📫&nbsp;&nbsp;{{ title }}</h1>
         <p class="max-w-2xl text-gray-700">
           I'll send an email only when I publish something on my blog, which is
-          usually once month at best. So don't worry about spam. I use
+          usually once month at best, and you can unsubscribe instantly at any time. So don't worry about spam. I use
           <a
             class="text-gray-900 hover:underline"
             href="https://buttondown.email"

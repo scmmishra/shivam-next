@@ -4,7 +4,7 @@
   >
     <div class="relative mx-auto overflow-hidden max-h-64">
       <div
-        class="absolute inset-0 transition-opacity hover:opacity-60 opacity-40 bg-gradient-to-t from-white to-transparent"
+        class="absolute inset-0 transition-opacity hover:opacity-60 opacity-30 bg-gradient-to-t from-white to-transparent"
       ></div>
       <div
         class="px-10 pt-10 pb-4 space-y-4 text-base leading-6 text-gray-700 sm:px-16 sm:pt-16 sm:pb-8 sm:text-lg sm:leading-7"
