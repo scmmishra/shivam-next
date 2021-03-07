@@ -44,7 +44,7 @@ export default {
   layout: "post",
   async asyncData({ $content, params }) {
     const article = await $content(`blog/${params.slug}`).fetch();
-    console.log(article)
+
     return { article };
   },
   computed: {

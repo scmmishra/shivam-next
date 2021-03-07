@@ -3,7 +3,7 @@
     :to="path"
     class="overflow-hidden duration-700 transform bg-white border border-gray-100 shadow-xl cursor-pointer rounded-xl sm:rounded-3xl hover:-translate-y-1"
   >
-    <div class="relative mx-auto overflow-hidden max-h-64">
+    <div class="relative mx-auto overflow-hidden max-h-80">
       <div
         class="absolute inset-0 transition-opacity hover:opacity-60 opacity-40 bg-gradient-to-t from-white to-transparent"
       ></div>

@@ -40,7 +40,7 @@ export default {
   components: { FrostedCard, BlogCard },
   async asyncData({ $content }) {
     const blogs = await $content('blog').where({ featured: true }).fetch()
-    console.log(blogs)
+
     return { blogs };
   },
   methods: {

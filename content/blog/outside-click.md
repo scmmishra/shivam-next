@@ -8,7 +8,9 @@ featured: true
 
 You might have used `v-model` , `v-if` , `v-for` or `v-show` shipped with Vue Core. These utilities are called directives, these essentially are tiny commands that you can attach to DOM elements.
 
-When building apps, the primary form of code reuse and abstraction that Vue has to offer is components - however there may be cases where you may need some low-level DOM access on plain elements, and this is where custom directives should be used. <!--more--> It’s important to note that directives are meant to encapsulate DOM manipulations only, while components are self-contained units that have their own view and data logic.
+When building apps, the primary form of code reuse and abstraction that Vue has to offer is components - however there may be cases where you may need some low-level DOM access on plain elements, and this is where custom directives should be used. It’s important to note that directives are meant to encapsulate DOM manipulations only, while components are self-contained units that have their own view and data logic.
+
+<!--more--> 
 
 One good example of such a use case is tooltips, [v-tooltip](https://github.com/Akryum/v-tooltip) is a popular library, it's a wrapper for [popperjs](https://github.com/popperjs/popper-core). This library can be registered as a directive and used as follows
 
