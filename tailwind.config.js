@@ -53,6 +53,25 @@ module.exports = {
         orange: colors.orange
       },
       typography: {
+        DEFAULT: {
+          css: {
+            h1: {
+              color: colors.gray[700],
+            },
+            h2: {
+              color: colors.gray[700],
+            },
+            h3: {
+              color: colors.gray[700],
+            },
+            h4: {
+              color: colors.gray[700],
+            },
+            p: {
+              color: colors.gray[600],
+            }
+          },
+        },
         'xs': {
           css: {
             pre: {
