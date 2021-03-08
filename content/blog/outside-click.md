@@ -1,5 +1,5 @@
 ---
-title: Detecting Outside Clicks Element
+title: Detecting Clicks Outside an Element
 readTime: 4 Mins
 featured: true
 references:
