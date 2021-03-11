@@ -6,11 +6,11 @@
           <h2 class="text-4xl font-black text-gray-300">Work</h2>
         </div>
         <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
-          <FrostedCard
+          <ProjectCard
             v-for="p in projects"
             :key="p.title"
             v-bind="p"
-          ></FrostedCard>
+          ></ProjectCard>
         </div>
       </div>
     </section>
@@ -32,16 +32,16 @@
 </template>
 
 <script>
-import FrostedCard from "~/components/FrostedCard.vue";
+import ProjectCard from "~/components/ProjectCard.vue";
 import BlogCard from "~/components/BlogCard.vue";
 
 
 export default {
-  components: { FrostedCard, BlogCard },
+  components: { ProjectCard, BlogCard },
   async asyncData({ $content }) {
     const blogs = await $content('blog').where({ featured: true }).fetch()
-
-    return { blogs };
+    const projects = await $content('project').sortBy('title').fetch()
+    return { blogs, projects };
   },
   methods: {
     getFormattedDate(date) {
@@ -50,7 +50,7 @@ export default {
   },
   data() {
     return {
-      projects: [
+      oldprojects: [
         {
           title: "Frappe Charts",
           link: "https://github.com/frappe/charts",

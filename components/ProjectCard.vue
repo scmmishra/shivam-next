@@ -1,5 +1,6 @@
 <template>
-  <div
+  <nuxt-link
+    :to="path"
     class="overflow-hidden duration-700 transform bg-white border border-gray-100 shadow-xl cursor-pointer rounded-xl sm:rounded-3xl hover:-translate-y-1"
   >
     <div class="relative mx-auto overflow-hidden max-h-64">
@@ -24,11 +25,11 @@
         </div>
       </div>
     </div>
-  </div>
+  </nuxt-link>
 </template>
 <script>
 export default {
-  name: "FrostedCard",
+  name: "ProjectCard",
   props: {
     title: {
       type: String,
@@ -43,6 +44,10 @@ export default {
       required: false,
     },
     date: {
+      type: String,
+      required: false,
+    },
+    path: {
       type: String,
       required: false,
     },

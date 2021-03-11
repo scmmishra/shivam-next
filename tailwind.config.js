@@ -56,19 +56,19 @@ module.exports = {
         DEFAULT: {
           css: {
             h1: {
-              color: colors.gray[700],
+              color: colors.gray[800],
             },
             h2: {
-              color: colors.gray[700],
+              color: colors.gray[800],
             },
             h3: {
-              color: colors.gray[700],
+              color: colors.gray[800],
             },
             h4: {
-              color: colors.gray[700],
+              color: colors.gray[800],
             },
             p: {
-              color: colors.gray[600],
+              color: colors.gray[700],
             },
             a: {
               textDecoration: 'none'

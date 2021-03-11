@@ -1,14 +1,7 @@
 <template>
-  <div>
-    <div
-      class="text-sm max-w-4xl mx-auto pt-12 flex items-center space-x-2 text-gray-400 hover:underline px-4 sm:px-0"
-    >
-      <nuxt-link :to="'/'">
-        Back to All Articles
-      </nuxt-link>
-    </div>
+  <div class="max-w-3xl mx-auto">
     <Nuxt />
-    <Signup title="Quality posts in your inbox" :verbose="true"></Signup>
+    <Signup title="Wanna learn more about my projects?" :verbose="false"></Signup>
     <Footer></Footer>
   </div>
 </template>
@@ -17,7 +10,7 @@ import Signup from "~/components/Signup.vue";
 import Footer from "~/components/Footer.vue";
 
 export default {
-  name: "Post",
+  name: "Project",
   components: { Signup, Footer },
   head() {
     return {
