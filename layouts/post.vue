@@ -1,12 +1,5 @@
 <template>
   <div>
-    <div
-      class="text-sm max-w-4xl mx-auto pt-12 flex items-center space-x-2 text-gray-400 hover:underline px-4 sm:px-0"
-    >
-      <nuxt-link :to="'/'">
-        Back to All Articles
-      </nuxt-link>
-    </div>
     <Nuxt />
     <Signup title="Quality posts in your inbox" :verbose="true"></Signup>
     <Footer></Footer>

@@ -1,16 +1,21 @@
 <template>
   <div class="max-w-4xl pt-12 mx-auto px-4 sm:px-0">
-    <div class="border-b border-gray-300 pt-12 pb-8">
-      <div class="prose-sm prose sm:prose lg:prose-md">
-        <div class="md:flex md:space-x-4 mb-2">
-          <div v-if="article.createdAt" class="text-xs font-bold text-gray-400 uppercase">
-            Published On {{ created }}
-          </div>
-          <div v-if="article.readTime" class="text-xs font-bold text-gray-400 uppercase">
-            READ TIME: {{ article.readTime }}
-          </div>
+    <div class="pb-5 max-w-2xl pt-10">
+      <nuxt-link class="text-gray-400 hover:underline " to="/"
+        >shivam.dev</nuxt-link
+      >
+      <h1 class="text-xl md:text-3xl xl:text-4xl font-extrabold mb-0">
+        {{ article.title }}
+      </h1>
+      <div
+        class=" mt-4 flex space-x-3 text-gray-400 text-xs"
+      >
+        <div v-if="article.createdAt" class="text-gray-400 uppercase">
+          Published On {{ created }}
         </div>
-        <h1>{{ article.title }}</h1>
+        <div v-if="article.readTime" class="text-gray-400 uppercase">
+          READ TIME: {{ article.readTime }}
+        </div>
       </div>
     </div>
     <div class="md:relative md:flex space-x-4">
@@ -44,7 +49,7 @@
 </template>
 
 <script>
-import dayjs from 'dayjs'
+import dayjs from "dayjs";
 
 export default {
   layout: "post",
@@ -55,8 +60,8 @@ export default {
   },
   computed: {
     created() {
-      return dayjs(this.article.createdAt).format('D MMM, YYYY')
-    }
+      return dayjs(this.article.createdAt).format("D MMM, YYYY");
+    },
   },
   head() {
     return {

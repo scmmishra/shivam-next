@@ -1,5 +1,5 @@
 ---
-title: Detecting Clicks Outside an Element
+title: Detecting Clicks Outside an Element in Vue
 readTime: 4 Mins
 featured: true
 references:
@@ -187,7 +187,8 @@ export default {
 };
 ```
 
-</codeblock>
+</code-block>
+
 
 And here it is. In your main.js file you can register the directive as follows
 
