@@ -13,8 +13,6 @@
         </p>
       </div>
       <div class="flex space-x-5 font-bold text-gray-600">
-        <a href="/projects">Projects</a>
-        <a href="/articles">Articles</a>
         <a href="https://twitter.com/scmmishra">Twitter</a>
         <a href="https://github.com/scmmishra">GitHub</a>
       </div>
