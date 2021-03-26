@@ -15,4 +15,6 @@ references:
     logo: "/tinyjs.svg"
 ---
 
+TinyJS is my first honest try in the "content game", it's a curated list of things I read aboout and in the JavaScript community across the internet. It's dispatched weekly and has over 180 subscribers. <!--more-->
+
 <reference-card :references="references"></reference-card>

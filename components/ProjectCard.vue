@@ -17,8 +17,8 @@
           }}</span>
           <div class="max-w-xl prose prose-xs">
             <h1 class="mt-0">{{ title }}</h1>
-            <!-- <h2>Vue Directives</h2> -->
-            <p>
+            <nuxt-content v-if="showExcerpt && excerpt" :document="{ body: excerpt }" />
+            <p v-else>
               {{ subtitle }}
             </p>
           </div>
@@ -51,6 +51,19 @@ export default {
       type: String,
       required: false,
     },
+    showExcerpt: {
+      type: Boolean,
+      default: false
+    },
+    excerpt: {
+      type: Object,
+      required: false,
+    },
   },
 };
 </script>
+<style scoped>
+.nuxt-content-container {
+  z-index: -20
+}
+</style>

@@ -12,13 +12,17 @@ references:
     title: "GitHub"
     description: " Simple, responsive, modern SVG Charts with zero dependencies "
     logo: "/github.svg"
+  - link: "https://codesandbox.io/s/frappe-charts-demo-viqud"
+    title: "Frappe Charts Demo"
+    description: "A Sandbox Demonstrating Frappe Charts usage"
+    logo: "/codesandbox.svg"
   - link: "https://frappe.io/charts/docs"
     title: "Documentation"
     description: "Frappe Chart Documentation"
     logo: "/charts.svg"
 ---
 
-Frappe Charts was started by a dear friend [Prateeksha](https://pratu16x7.com/) when she worked at Frappe, when I joined I continued building and maintaing the library and been continuing to do so. The project was launched on HackerNews on 31st October, it recieved overwhelming response, garnered over 470 points and was also featured in [GitHub Octoverse 2018](https://octoverse.github.com/2018/projects). Read the launch story [here](https://medium.com/frapp%C3%A9-thoughts/so-we-decided-to-create-our-own-charts-a95cb5032c97).
+Frappe Charts was started by a dear friend [Prateeksha](https://pratu16x7.com/) when she worked at Frappe, when I joined I continued building and maintaing the library and been continuing to do so. The project was launched on HackerNews on 31st October, it recieved overwhelming response, garnered over 470 points and was also featured in [GitHub Octoverse 2018](https://octoverse.github.com/2018/projects). <!--more-->Read the launch story [here](https://medium.com/frapp%C3%A9-thoughts/so-we-decided-to-create-our-own-charts-a95cb5032c97).
 
 ## The Library
 

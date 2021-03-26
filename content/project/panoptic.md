@@ -21,4 +21,12 @@ references:
     logo: "/github.svg"
 ---
 
+Project Panoptic aims to bring transparency and accountability to the relevant government stakeholders involved in the deployment and implementation of facial recognition technology (FRT) projects in India. <!--more-->
+
+## Internet Freedom Foundation
+
+The IFF is an Indian digital liberties organisation that seeks to ensure that technology respects fundamental rights. Our goal is to ensure that Indian citizens can use the Internet with liberties guaranteed by the Constitution.
+
+## Links
+
 <reference-card :references="references"></reference-card>
