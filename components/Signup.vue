@@ -9,7 +9,8 @@
         <h1 class="text-2xl font-bold">📫&nbsp;&nbsp;{{ title }}</h1>
         <p class="max-w-2xl text-gray-700">
           I'll send an email only when I publish something on my blog, which is
-          usually once month at best, and you can unsubscribe instantly at any time. So don't worry about spam. I use
+          usually once month at best, and you can unsubscribe instantly at any
+          time. So don't worry about spam. I use
           <a
             class="text-gray-900 hover:underline"
             href="https://buttondown.email"
@@ -37,21 +38,32 @@
       </div>
       <div>
         <label class="sr-only">Enter your email here</label>
-        <div
+
+        <form
           class="flex flex-col space-y-2 sm:flex-row sm:space-x-2 sm:space-y-0"
+          action="https://buttondown.email/api/emails/embed-subscribe/shivam"
+          method="post"
+          target="popupwindow"
+          onsubmit="window.open('https://buttondown.email/shivam', 'popupwindow')"
         >
           <input
             aria-label="email"
-            type="text"
+            type="email" name="email" id="bd-email"
             placeholder="Your email address"
             class="flex-grow w-full px-3 py-2 bg-gray-100 rounded-md outline-none"
           />
           <button
             class="block w-full py-2 text-white bg-gray-700 rounded-md sm:w-64 hover:bg-gray-800"
+            type="submit"
           >
             Beam Me Up!
           </button>
-        </div>
+        </form>
+        <p class="text-sm mt-2 max-w-2xl text-gray-400">
+          <a href="https://buttondown.email" class="hover:underline" target="_blank"
+            >Powered by Buttondown.</a
+          >
+        </p>
       </div>
     </div>
   </section>
@@ -62,12 +74,12 @@ export default {
   props: {
     title: {
       type: String,
-      default: 'Subscribe'
+      default: "Subscribe",
     },
     verbose: {
       type: Boolean,
       default: false,
-    }
-  }
+    },
+  },
 };
 </script>
