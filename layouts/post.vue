@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="max-w-3xl mx-auto">
     <Nuxt />
     <Signup title="Quality posts in your inbox" :verbose="true"></Signup>
     <Footer></Footer>

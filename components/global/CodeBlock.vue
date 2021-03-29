@@ -28,7 +28,6 @@ export default {
 }
 
 pre {
-  @apply max-w-2xl;
   margin-top: 0 !important;
   border-top-right-radius: 0px !important;
   border-top-left-radius: 0px !important;

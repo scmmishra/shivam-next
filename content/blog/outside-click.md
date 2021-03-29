@@ -1,5 +1,6 @@
 ---
-title: Detecting Clicks Outside an Element in Vue
+title: Vue Outside Click Directive
+subtitle: Building a custom directive to detect clicks outside an element in Vue
 readTime: 4 Mins
 featured: true
 references:
@@ -9,9 +10,9 @@ references:
     logo: "/vue.svg"
 ---
 
-## Vue Directives
+You might have used `v-model`, `v-if`, `v-for` or `v-show` shipped with Vue Core. These utilities are called directives, these are tiny commands that you can attach to DOM elements.
 
-You might have used `v-model` , `v-if` , `v-for` or `v-show` shipped with Vue Core. These utilities are called directives, these essentially are tiny commands that you can attach to DOM elements.
+## Vue Directives
 
 When building apps, the primary form of code reuse and abstraction that Vue has to offer is components - however there may be cases where you may need some low-level DOM access on plain elements, and this is where custom directives should be used. It’s important to note that directives are meant to encapsulate DOM manipulations only, while components are self-contained units that have their own view and data logic.
 
@@ -89,7 +90,7 @@ function onDocumentClick(e, el, fn) {
 }
 ```
 
-Let’s create the directive. In this case we only need the `bind` and `unbind` hooks.
+Let’s create the directive. In this case, we only need the `bind` and `unbind` hooks.
 
 ```js
 export default {
@@ -107,11 +108,11 @@ export default {
 };
 ```
 
-The bind, like other hooks receive a few arguments. You can see all of them [here](https://vuejs.org/v2/guide/custom-directive.html#Directive-Hook-Arguments). The one we are interested is `binding` an object that contains the name of the directive, value that is passed to it and more.
+The bind, like other hooks receive a few arguments. You can see all of them [here](https://vuejs.org/v2/guide/custom-directive.html#Directive-Hook-Arguments). The one we are interested is `binding` an object that contains the name of the directive, the value that is passed to it and more.
 
-In our case the value will be a function that will trigger on outside click.
+In our case, the value will be a function that will trigger on outside click.
 
-This alone would work fine, however we need to remove the event listener on `unbind` this means we need to store the added event listener in the memory for reference later. This is very simple to solve, all we need is an array, that we will store all the event listeners in. We will also attach an index to the data attributes of the element to recognise the index of the event listener.
+This alone would work fine, however we need to remove the event listener on `unbind` this means we need to store the added event listener in the memory for reference later. This is simple to solve, all we need is an array, that we will store all the event listeners in. We will also attach an index to the data attributes of the element to recognise the index of the event listener.
 
 Our directive function now looks like this
 
