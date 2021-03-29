@@ -45,7 +45,13 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/content
     '@nuxt/content',
+    '@nuxtjs/robots'
   ],
+
+  robots: {
+    UserAgent: '*',
+    Disallow: ['/cya-soon', '/thank-you'],
+  },
 
   // Content module configuration: https://go.nuxtjs.dev/config-content
   content: {

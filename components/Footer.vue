@@ -13,8 +13,8 @@
         </p>
       </div>
       <div class="flex space-x-5 font-bold text-gray-600">
-        <a href="https://twitter.com/scmmishra">Twitter</a>
-        <a href="https://github.com/scmmishra">GitHub</a>
+        <a href="https://twitter.com/scmmishra" target="_blank" ref="noopener noreferrer">Twitter</a>
+        <a href="https://github.com/scmmishra" target="_blank" ref="noopener noreferrer">GitHub</a>
       </div>
     </div>
   </footer>
