@@ -4,11 +4,11 @@
       <nuxt-link class="text-gray-400 hover:underline text-center" to="/"
         >shivam.dev</nuxt-link
       >
-      <h1 class="text-xl md:text-4xl xl:text-5xl font-extrabold mb-0">
+      <h1 class="text-3xl md:text-4xl xl:text-5xl font-extrabold mb-0">
         {{ article.title }}
       </h1>
       <p
-        class="max-w-lg mx-auto text-center mt-4 mb-2 text-gray-500 text-xl font-serif"
+        class="max-w-lg mx-auto text-center mt-4 mb-2 text-gray-500 text-lg md:text-xl font-serif"
       >
         {{ article.subtitle }}
       </p>

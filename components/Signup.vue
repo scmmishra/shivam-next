@@ -1,6 +1,6 @@
 <template>
   <section
-    class="max-w-4xl px-4 py-12 pb-24 mx-auto space-y-5 transform md:px-0 -rotate-1"
+    class="max-w-4xl px-4 py-12 pb-24 mx-auto space-y-5 transform md:px-0 md:-rotate-1"
   >
     <div
       class="p-8 space-y-4 bg-white border border-gray-100 shadow-lg sm:p-16 rounded-xl sm:rounded-3xl"
