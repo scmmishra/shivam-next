@@ -16,15 +16,16 @@ export default {
       { hid: 'description', name: 'description', content: '' },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.svg' }],
+    script: [{ src: 'https://cdn.splitbee.io/sb.js', async: true, crossorigin: "anonymous" }]
   },
 
-  fontLoader: {
-    url:
-      'https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap',
+//   fontLoader: {
+//     url:
+//       'https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap',
 
-    prefetch: true,
-    preconnect: true,
-  },
+//     prefetch: true,
+//     preconnect: true,
+//   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [],
