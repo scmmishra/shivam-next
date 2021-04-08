@@ -10,7 +10,7 @@
           <a
             class="text-gray-900 underline hover:underline sm:no-underline"
             href="https://deepsource.io"
-            >Deepsource</a
+            >DeepSource</a
           >, focusing on Vue, Nuxt, TypeScript with a pinch of GraphQL. This
           page has a list of my projects and my writings. You can find me on
           twitter
