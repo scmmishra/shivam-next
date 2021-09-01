@@ -27,6 +27,7 @@ const perfume = new Perfume({
         siteId: sideId,
         value: data,
         path: window.location.pathname || "",
+        timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
         ...navigatorInformation,
       });
     }
