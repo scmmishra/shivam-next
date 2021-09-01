@@ -26,6 +26,7 @@ const perfume = new Perfume({
         metricName,
         siteId: sideId,
         value: data,
+        path: window.location.pathname || "",
         ...navigatorInformation,
       });
     }
