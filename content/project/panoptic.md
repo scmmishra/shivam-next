@@ -1,6 +1,7 @@
 ---
 title: Project Panoptic
 logo: /panoptic.svg
+featured: true
 subtitle: Tracker, to keep Facial recognition systems in India in check. Built for Internet Freedom Foundation.
 github: https://github.com/scmmishra/panoptic
 license: MIT
@@ -17,7 +18,7 @@ references:
     logo: "/iff.png"
   - link: https://github.com/scmmishra/panoptic
     title: "GitHub"
-    description:  Frappe App for Project Panoptic 
+    description: Frappe App for Project Panoptic
     logo: "/github.svg"
 ---
 

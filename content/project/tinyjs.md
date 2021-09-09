@@ -1,6 +1,7 @@
 ---
 title: TinyJS
 logo: /tinyjs.svg
+featured: true
 subtitle: A weekly newsletter with the top 3 stories from the JavaScript world. Short and Sweet. No Spam.
 projectHome: https://tinyjs.email
 # hero: charts/charts-hero.png

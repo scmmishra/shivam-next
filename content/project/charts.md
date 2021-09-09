@@ -1,6 +1,7 @@
 ---
 title: Frappe Charts
 logo: /charts.svg
+featured: true
 subtitle: Frappe Charts is a simple lightweight and modern SVG charts for the web with zero dependencies.
 github: https://github.com/frappe/charts
 license: MIT
@@ -10,7 +11,7 @@ hero: charts/charts-hero.png
 references:
   - link: "https://github.com/frappe/charts"
     title: "GitHub"
-    description: " Simple, responsive, modern SVG Charts with zero dependencies "
+    description: "Simple, responsive, modern SVG Charts with zero dependencies"
     logo: "/github.svg"
   - link: "https://codesandbox.io/s/frappe-charts-demo-viqud"
     title: "Frappe Charts Demo"
@@ -29,7 +30,6 @@ Frappe Charts was started by a dear friend [Prateeksha](https://pratu16x7.com/) 
 The original design was inspired by GitHub, the library also included a heatmap just like the github contribution graph.
 
 <img alt="Heatmap" src="/charts/heatmap.png" class="bg-white rounded-lg shadow-md overflow-hidden px-2 py-4 my-2">
-
 
 Since then, we've redesigned the library for v2. It was largely cosmetic, with a better color palette, extra config options, new tooltips, legends and quite a few bug fixes. These charts are built using SVG, all the data processing and SVG components are built using vanilla JS without external libraries.
 
