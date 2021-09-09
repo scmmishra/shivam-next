@@ -1,27 +1,21 @@
-const colors = require('tailwindcss/colors')
+const colors = require("tailwindcss/colors");
 
 module.exports = {
   future: {
     removeDeprecatedGapUtilities: true,
     purgeLayersByDefault: true,
   },
-  purge: [
-    './components/**/*.{vue,js}',
-    './layouts/**/*.vue',
-    './pages/**/*.vue',
-    './plugins/**/*.{js,ts}',
-    './nuxt.config.{js,ts}',
-  ],
+  purge: ["./components/**/*.{vue,js}", "./layouts/**/*.vue", "./pages/**/*.vue", "./plugins/**/*.{js,ts}", "./nuxt.config.{js,ts}"],
   theme: {
     backdropFilter: {
-      'none': 'none',
-      'blur': 'blur(20px)',
+      none: "none",
+      blur: "blur(20px)",
     },
     extend: {
       colors: {
-        'light-blue': colors.lightBlue,
+        "light-blue": colors.sky,
         cyan: colors.cyan,
-        orange: colors.orange
+        orange: colors.orange,
       },
       typography: {
         DEFAULT: {
@@ -42,51 +36,48 @@ module.exports = {
               color: colors.gray[700],
             },
             a: {
-              textDecoration: 'none'
-            }
+              textDecoration: "none",
+            },
           },
         },
-        'xs': {
+        xs: {
           css: {
             pre: {
-              marginTop: '0px',
+              marginTop: "0px",
             },
-            fontSize: '0.5rem',
+            fontSize: "0.5rem",
             h1: {
-              fontSize: '1.75rem',
+              fontSize: "1.75rem",
               fontWeight: 800,
-              marginTop: '0',
-              marginBottom: '0.8rem',
+              marginTop: "0",
+              marginBottom: "0.8rem",
               lineHeight: 1.2,
             },
             h2: {
-              fontSize: '1.25rem',
+              fontSize: "1.25rem",
               fontWeight: 800,
-              marginTop: '0',
-              marginBottom: '0.5rem',
+              marginTop: "0",
+              marginBottom: "0.5rem",
               lineHeight: 1.2,
             },
             h3: {
-              fontSize: '1rem',
+              fontSize: "1rem",
               fontWeight: 800,
-              marginTop: '0',
-              marginBottom: '0.5rem',
+              marginTop: "0",
+              marginBottom: "0.5rem",
               lineHeight: 1.2,
             },
             p: {
-              fontSize: '0.875rem',
-              marginTop: '0',
-              marginBottom: '0.5rem',
+              fontSize: "0.875rem",
+              marginTop: "0",
+              marginBottom: "0.5rem",
               lineHeight: 1.5,
             },
           },
         },
-      }
+      },
     },
   },
   variants: {},
-  plugins: [
-    require('@tailwindcss/typography'),
-    require('tailwindcss-filters'),
-  ],
-}
+  plugins: [require("@tailwindcss/typography"), require("tailwindcss-filters")],
+};
