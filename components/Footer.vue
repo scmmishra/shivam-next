@@ -6,10 +6,11 @@
         <p class="max-w-2xl text-gray-700">
           Thanks for scrolling this far.
           <span
-            class="text-gray-900 underline hover:underline sm:no-underline"
+            class="text-gray-900 underline hover:underline sm:no-underline cursor-pointer"
             @click="fire"
-            >Here's some confetti for you</span
+            >Here's some confetti for you.</span
           >
+          <br>P.S. My neighbour Hricha is the best.
         </p>
       </div>
       <div class="flex space-x-5 font-bold text-gray-600">
