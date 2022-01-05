@@ -24,7 +24,7 @@
             class="text-gray-900 underline hover:underline sm:no-underline"
             href="https://github.com/scmmishra"
             >GitHub</a
-          >
+          >.
         </p>
       </div>
     </header>
