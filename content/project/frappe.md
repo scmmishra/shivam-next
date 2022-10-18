@@ -1,6 +1,7 @@
 ---
 title: Frappe Framework
 logo: /framework.svg
+featured: true
 subtitle: Web Framework for Rapid App Development. Metadata driven full stack framework in Python and Javascript.
 github: https://github.com/frappe/frappe
 license: MIT

@@ -1,6 +1,7 @@
 ---
 title: DeepSource UI
 logo: /deepsource.svg
+featured: true
 subtitle: DeepSource helps developers run automated code quality checks on their projects.
 projectHome: https://deepsource.io/
 hero: deepsource-hero.png
