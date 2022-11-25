@@ -4,15 +4,16 @@ import axios from "axios";
 const sideId = "637c4ff6-d09a-4e27-be9e-a58ca19b5162";
 
 function sendBeacon(data) {
-  const options = {
-    method: "POST",
-    url: "https://enzo.shivam.dev/api/beacon",
-    headers: { "Content-Type": "application/json" },
-    data: data,
-  };
-  axios.request(options).catch(function (error) {
-    console.error(error);
-  });
+  console.log(data)
+//   const options = {
+//     method: "POST",
+//     url: "https://enzo.shivam.dev/api/beacon",
+//     headers: { "Content-Type": "application/json" },
+//     data: data,
+//   };
+//   axios.request(options).catch(function (error) {
+//     console.error(error);
+//   });
 }
 
 const perfume = new Perfume({
