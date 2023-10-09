@@ -6,12 +6,12 @@
           Shivam Mishra
         </h1>
         <p class="max-w-2xl mt-4 text-gray-700">
-          Front End engineering at
+          Lead Product Engineer at
           <a
             class="text-gray-900 underline hover:underline sm:no-underline"
-            href="https://deepsource.io"
-            >DeepSource</a
-          >, focusing on Vue, Nuxt, TypeScript with a pinch of GraphQL. This
+            href="https://chatwoot.com"
+            >Chatwoot</a
+          >, focusing on Vue, TypeScript, Ruby and Python. This
           page has a list of my projects and my writings. You can find me on
           twitter
           <a
